@@ -1,0 +1,194 @@
+/* Modern CSS with animations and better styling */
+
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --primary-color: #2ECC71;
+    --secondary-color: #27AE60;
+    --background-color: #FFFFFF;
+    --text-color: #2C3E50;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+    --background-color: #1A1A1A;
+    --text-color: #FFFFFF;
+    --card-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Animated Header */
+.animated-header {
+    text-align: center;
+    padding: 2rem 0;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.animated-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Metric Cards */
+.metric-card {
+    background: var(--background-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    margin-bottom: 1rem;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+}
+
+.metric-card h3 {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.metric-card h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.delta {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.delta.positive {
+    color: #2ECC71;
+}
+
+.delta.negative {
+    color: #E74C3C;
+}
+
+.delta span {
+    opacity: 0.7;
+    font-size: 0.8rem;
+}
+
+/* User Profile */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(46, 204, 113, 0.1);
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+}
+
+.user-info h4 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.user-info p {
+    margin: 0;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    color: var(--text-color);
+}
+
+/* Section Gap */
+.section-gap {
+    height: 2rem;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Chart Container */
+.chart-container {
+    background: var(--background-color);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.chart-container:hover {
+    transform: translateY(-3px);
+}
+
+/* Alert Cards */
+.alert-card {
+    background: var(--background-color);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    border-left: 4px solid;
+}
+
+.alert-card.high-risk {
+    border-color: #E74C3C;
+}
+
+.alert-card.medium-risk {
+    border-color: #F1C40F;
+}
+
+.alert-card.low-risk {
+    border-color: #2ECC71;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .metric-card h2 {
+        font-size: 1.5rem;
+    }
+    
+    .animated-header h1 {
+        font-size: 2rem;
+    }
+}
