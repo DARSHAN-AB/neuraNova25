@@ -7,7 +7,7 @@ To set up the project on your local machine, follow these steps:
 Copy and paste the following command in your terminal to clone the repository:  
 
 ```sh
-git clone https://github.com/DARSHAN-AB/hack.git
+git clone https://github.com/DARSHAN-AB/neuraNova25.git
 ```
 
 ## Overview  
